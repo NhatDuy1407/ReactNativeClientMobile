@@ -23,7 +23,7 @@
   },
   "files.eol": "\n",
   "sonarlint.connectedMode.project": {
-    "projectKey": "client-web_client-web"
+    "projectKey": "client-mobile"
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
@@ -31,4 +31,5 @@
   },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.tabSize": 2
 }

@@ -7,17 +7,29 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test:watch": "jest --watch",
+    "test:coverage": "npm run test:ci",
+    "test:ci": "jest --coverage --no-cache",
+    "lint": "eslint",
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,scss}\"",
-    "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,scss}\""
+    "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,scss}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
+    "@types/react-redux": "^7.1.22",
     "react": "17.0.2",
-    "react-native": "0.67.2"
+    "react-native": "0.67.2",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.2",
+    "react-redux": "^7.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.15",
@@ -26,6 +38,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.14.0",
+    "husky": "^7.0.4",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "2.5.1",
