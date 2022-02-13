@@ -18,9 +18,10 @@ const userLogin = createAsyncThunk(
       dispatch(
         AuthActions.userLoginSuccess({
           authenticated: true,
-          loginUser: {
+          currentUser: {
             username: user.username,
           },
+          accessToken: '123',
         })
       );
     } catch {
@@ -29,21 +30,23 @@ const userLogin = createAsyncThunk(
   }
 );
 
-const restoreToken = createAsyncThunk<AuthState>(
+const restoreToken = createAsyncThunk<AuthState, void, {}>(
   `${actionPrefix} User Restore Token`,
   async () => {
     const user = await getLoggedUserFromStorage();
     if (user) {
       return {
         authenticated: true,
-        loginUser: user,
-      };
+        currentUser: user,
+        accessToken: '123',
+      } as AuthState;
     }
 
     return {
       authenticated: false,
-      loginUser: null,
-    };
+      currentUser: null,
+      accessToken: '',
+    } as AuthState;
   }
 );
 
@@ -54,8 +57,9 @@ const logOut = createAsyncThunk<AuthState>(
 
     return {
       authenticated: false,
-      loginUser: null,
-    };
+      currentUser: null,
+      accessToken: '',
+    } as AuthState;
   }
 );
 

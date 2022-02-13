@@ -5,7 +5,7 @@ import LoginContainer from '../core/auth/containers/LoginContainer';
 import { AuthActions } from '../core/auth/state/auth.actions';
 import { AuthSelectors } from '../core/auth/state/auth.selectors';
 import { Route } from '../core/models/app.models';
-import { NotFoundContainer } from '../core/notfound/containers/NotFoundContainer';
+import NotFoundContainer from '../core/notfound/containers/NotFoundContainer';
 import { useAppDispatch } from '../core/store/app.store';
 import { TabNavigator } from './TabNavigation';
 

@@ -2,7 +2,7 @@ import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 import { AuthActions } from './auth.actions';
 import { AuthState, initialAuthState } from './auth.state';
 
-export const authReducer = createReducer(initialAuthState, builder => {
+const authReducer = createReducer(initialAuthState, builder => {
   builder.addCase(
     AuthActions.userLoginSuccess,
     (state, action: PayloadAction<AuthState>): AuthState => {
@@ -35,6 +35,8 @@ const updateAuthState = (state: AuthState, newState: AuthState): AuthState => {
   return {
     ...state,
     authenticated: newState.authenticated,
-    loginUser: newState.loginUser,
+    currentUser: newState.currentUser,
   };
 };
+
+export default authReducer;

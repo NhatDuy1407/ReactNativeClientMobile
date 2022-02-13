@@ -1,11 +1,15 @@
 import { User } from '../models/auth.models';
 
+export const authKey = 'auth';
+
 export interface AuthState {
-  loginUser: User | null;
+  currentUser: User | null;
   authenticated: boolean;
+  accessToken: string;
 }
 
 export const initialAuthState: AuthState = {
-  loginUser: null,
-  authenticated: false,
+  currentUser: null,
+  authenticated: true,
+  accessToken: '',
 };

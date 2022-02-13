@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { RootStackScreenProps } from '../../../types/NavigationTypes';
 import { Route } from '../../models/app.models';
 
-export const NotFoundContainer = ({
+const NotFoundContainer = ({
   navigation,
 }: RootStackScreenProps<Route.NOTFOUND>) => {
   return (
@@ -15,3 +15,5 @@ export const NotFoundContainer = ({
     </View>
   );
 };
+
+export default NotFoundContainer;

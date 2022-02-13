@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { TabInfo } from '../../shared/components/TabInfo';
+import TabInfo from '../../shared/components/TabInfo';
 
-export const AboutContainer = () => {
+const AboutContainer = () => {
   return (
     <View>
       <Text>About</Text>
@@ -11,3 +11,5 @@ export const AboutContainer = () => {
     </View>
   );
 };
+
+export default AboutContainer;
