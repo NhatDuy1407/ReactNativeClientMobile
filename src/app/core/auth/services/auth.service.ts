@@ -1,3 +1,4 @@
+import { performTimeConsumingTask } from '../../../utils/perform-time-consuming-task.util';
 import { StorageKey } from '../../models/app.models';
 import {
   removeData,
@@ -8,6 +9,8 @@ import { loginApi } from '../api/auth.api';
 import { LogInRequest, User } from '../models/auth.models';
 
 export const login = async (loginRequest: LogInRequest): Promise<User> => {
+  await performTimeConsumingTask();
+
   const user = await getLoggedUserFromStorage();
   if (user) {
     return user;

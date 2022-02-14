@@ -1,4 +1,5 @@
 import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
+import { UIActions } from '../../state/ui/ui.actions';
 import { LogInRequest } from '../models/auth.models';
 import {
   getLoggedUserFromStorage,
@@ -13,6 +14,7 @@ const userLogin = createAsyncThunk(
   `${actionPrefix} User Login`,
   async (loginRequest: LogInRequest, { dispatch }) => {
     try {
+      dispatch(UIActions.setLoading(true));
       const user = await login(loginRequest);
 
       dispatch(
@@ -26,6 +28,8 @@ const userLogin = createAsyncThunk(
       );
     } catch {
       dispatch(AuthActions.userLoginFailure());
+    } finally {
+      dispatch(UIActions.setLoading(false));
     }
   }
 );
