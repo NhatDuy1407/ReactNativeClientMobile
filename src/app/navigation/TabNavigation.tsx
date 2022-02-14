@@ -16,6 +16,7 @@ export const TabNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon icon={faHome} color={color} />,
+          tabBarShowLabel: false,
         }}
         name={Route.HOME_TAB}
         component={HomeNavigator}
@@ -26,6 +27,7 @@ export const TabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <TabBarIcon icon={faStore} color={color} />
           ),
+          tabBarShowLabel: false,
         }}
         name={Route.ORDER_TAB}
         component={OrderNavigator}
@@ -34,6 +36,7 @@ export const TabNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon icon={faBars} color={color} />,
+          tabBarShowLabel: false,
         }}
         name={Route.OTHER_TAB}
         component={OtherNavigator}

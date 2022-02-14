@@ -6,6 +6,8 @@
 - Navigation
 - State Management using Redux
 - AsyncStorage
+- Core Components
+- CI Project Config
 
 # File Structure
 
@@ -16,10 +18,14 @@
 │ ├── app
 | | ├── core
 | | | ├── auth
+| | | ├── notification
+| | | ├── containers
+| | | ├── components
 | | | ├── models
 | | | ├── storage
 | | | ├── services
 | | | ├── store
+| | | ├── state
 | | | ├── ui
 | | | ├── coreModuleA, coreModuleB
 | | ├── shared
@@ -43,7 +49,7 @@ _*Note: Included core, shared, etc.*_
 │ ├── services (logic here)
 │ ├── navigation (feature routes structure)
 │ ├── types
-│ ├── ultils
+│ ├── utils
 
 # State Management
 
