@@ -37,9 +37,6 @@ const MainNavigator = () => {
         component={NotFoundContainer}
         options={{ title: 'Oops!' }}
       />
-      {/* <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
-      </Stack.Group> */}
     </Stack.Navigator>
   );
 };

@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { Route } from '../core/models/app.models';
 import HomeNavigator from '../home/navigation/HomeNavigator';
-import OrderNavigator from '../order/navigation/OrderNavigation';
+import OrderNavigator from '../order/navigation/OrderNavigator';
 import OtherNavigator from '../other/navigation/OtherNavigator';
 import { TabBarIcon } from '../shared/components/TabBarIcon';
 

@@ -3,7 +3,9 @@ export enum StorageKey {
 }
 
 export enum Route {
+  APP = 'APP',
   MAIN = 'MAIN',
+  SPLASH = 'SPLASH',
   HOME_TAB = 'HOME_TAB',
   ORDER_TAB = 'ORDER_TAB',
   OTHER_TAB = 'OTHER_TAB',

@@ -4,8 +4,8 @@ import orderReducer from '../../order/state/order.reducer';
 import { orderKey } from '../../order/state/order.state';
 import authReducer from '../auth/state/auth.reducer';
 import { authKey } from '../auth/state/auth.state';
-import uiReducer from '../ui/state/ui.reducer';
-import { uiKey } from '../ui/state/ui.state';
+import uiReducer from '../state/ui/ui.reducer';
+import { uiKey } from '../state/ui/ui.state';
 import { AppState } from './app.state';
 
 const appStore = configureStore<AppState>({
