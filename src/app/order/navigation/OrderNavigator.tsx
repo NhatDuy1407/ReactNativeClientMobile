@@ -20,11 +20,11 @@ const OrderNavigator = () => {
       }}
     >
       <Stack.Screen
-        options={({ navigation }) => ({
+        options={() => ({
           headerRight: () => (
             <View style={styles.container}>
-              <CartIconContainer navigation={navigation} />
-              <OrderRightHeader navigation={navigation} />
+              <CartIconContainer />
+              <OrderRightHeader />
             </View>
           ),
         })}

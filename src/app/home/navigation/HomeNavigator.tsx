@@ -11,8 +11,8 @@ const HomeNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={({ navigation }) => ({
-          headerRight: () => <CartIconContainer navigation={navigation} />,
+        options={() => ({
+          headerRight: () => <CartIconContainer />,
         })}
         name={Route.HOME}
         component={HomeContainer}

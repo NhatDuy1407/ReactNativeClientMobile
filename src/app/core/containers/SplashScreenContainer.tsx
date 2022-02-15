@@ -1,3 +1,4 @@
+import { CommonActions, useNavigation } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
@@ -6,15 +7,16 @@ import { UIActions } from '../state/ui/ui.actions';
 import { UISelectors } from '../state/ui/ui.selectors';
 import { useAppDispatch } from '../store/app.store';
 
-const SplashScreenContainer = ({ navigation }: any) => {
+const SplashScreenContainer = () => {
   const dispatch = useAppDispatch();
-  dispatch(UIActions.initializeApp());
-
+  const navigation = useNavigation();
   const isInitializedApp = useSelector(UISelectors.selectIsInitializedApp);
+
+  dispatch(UIActions.initializeApp());
 
   useEffect(() => {
     if (!isInitializedApp) {
-      navigation.navigate(Route.APP);
+      navigation.dispatch(dispatch(CommonActions.navigate(Route.APP)));
     }
   });
 
