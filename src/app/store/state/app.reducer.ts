@@ -1,10 +1,10 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
-import { UIActions } from './app.actions';
+import { AppActions } from './app.actions';
 import { AppState, initialAppState } from './app.state';
 
 const appReducer = createReducer(initialAppState, builder => {
   builder.addCase(
-    UIActions.setLoading,
+    AppActions.setLoading,
     (state: AppState, action: PayloadAction<boolean>): AppState => {
       return {
         ...state,
@@ -14,7 +14,7 @@ const appReducer = createReducer(initialAppState, builder => {
   );
 
   builder.addCase(
-    UIActions.initializeApp.fulfilled,
+    AppActions.initializeApp.fulfilled,
     (state: AppState): AppState => {
       return {
         ...state,

@@ -10,7 +10,7 @@ const initializeApp = createAsyncThunk(
   }
 );
 
-export const UIActions = {
+export const AppActions = {
   setLoading,
   initializeApp,
 };

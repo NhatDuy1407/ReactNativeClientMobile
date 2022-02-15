@@ -10,6 +10,6 @@ export interface AuthState {
 
 export const initialAuthState: AuthState = {
   currentUser: null,
-  authenticated: true,
+  authenticated: false,
   accessToken: '',
 };
