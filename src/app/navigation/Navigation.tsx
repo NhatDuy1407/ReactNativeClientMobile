@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import SplashScreenContainer from '../core/containers/SplashScreenContainer';
-import { Route } from '../core/models/app.models';
+import { Route } from '../definition/models/app.models';
+import SplashScreen from '../screens/SplashScreen';
 import MainNavigator from './MainNavigator';
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +13,7 @@ const Navigation = () => {
         <Stack.Screen
           options={{ headerShown: false }}
           name={Route.SPLASH}
-          component={SplashScreenContainer}
+          component={SplashScreen}
         />
         <Stack.Screen
           options={{ headerShown: false }}

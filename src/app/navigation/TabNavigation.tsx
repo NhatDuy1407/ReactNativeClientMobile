@@ -1,11 +1,10 @@
-import { faBars, faHome, faStore } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { Route } from '../core/models/app.models';
-import HomeNavigator from '../home/navigation/HomeNavigator';
-import OrderNavigator from '../order/navigation/OrderNavigator';
-import OtherNavigator from '../other/navigation/OtherNavigator';
-import { TabBarIcon } from '../shared/components/TabBarIcon';
+import { TabBarIcon } from '../components/TabBarIcon';
+import { Route } from '../definition/models/app.models';
+import HomeNavigator from './HomeNavigator';
+import SettingNavigator from './SettingNavigator';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -24,22 +23,11 @@ export const TabNavigator = () => {
       <BottomTab.Screen
         options={{
           headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon icon={faStore} color={color} />
-          ),
-          tabBarShowLabel: false,
-        }}
-        name={Route.ORDER_TAB}
-        component={OrderNavigator}
-      />
-      <BottomTab.Screen
-        options={{
-          headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon icon={faBars} color={color} />,
           tabBarShowLabel: false,
         }}
-        name={Route.OTHER_TAB}
-        component={OtherNavigator}
+        name={Route.SETTING_TAB}
+        component={SettingNavigator}
       />
     </BottomTab.Navigator>
   );

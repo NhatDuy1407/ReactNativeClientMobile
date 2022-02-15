@@ -77,13 +77,13 @@ _*Note: Included core, shared, etc.*_
 # Navigation Structure
 
 ├── InitialNavigator
-│ ├── SplashScreenContainer
+│ ├── SplashContainer
 │ ├── MainNavigator
 │ │ ├── LoginContainer
 │ │ ├── NotFoundContainer
 │ │ ├── TabNavigator
 │ │ │ ├── HomeNavigator
-│ │ │ │ ├── HomeContainer
+│ │ │ │ ├── HomeScreen
 │ │ │ │ ├── CartContainer
 │ │ │ ├── OtherNavigator
 │ │ │ │ ├── OtherContainer

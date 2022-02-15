@@ -3,14 +3,14 @@ import { StatusBar, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { Provider, useSelector } from 'react-redux';
-import LoadingOverlay from './core/components/LoadingOverlay';
-import { UISelectors } from './core/state/ui/ui.selectors';
-import appStore from './core/store/app.store';
+import LoadingOverlay from './components/loading/LoadingOverlay';
 import Navigation from './navigation/Navigation';
+import { AppSelectors } from './store/state/app.selectors';
+import appStore from './store/store';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const isLoading = useSelector(UISelectors.selectIsLoading);
+  const isLoading = useSelector(AppSelectors.selectIsLoading);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
